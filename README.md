@@ -1,19 +1,22 @@
-<img src="https://github.com/erictktk/UnityBasics/blob/master/unity%20basics.png" width="400">
+# Unity Basics
 
+![Unity Basics](https://github.com/erictktk/UnityBasics/blob/master/unity%20basics.png)
 
-A lightweight library of scripts to cover basic Unity functionality to prototype quicker.
+A lightweight library of scripts to cover basic Unity functionality and help you prototype faster.  
 
-Includes:
+## Includes
 
-Transforms:
--Movement, including constant translations, sine movement along vectors, ping pong movement
--Rotation, for nice billboards
+### Transforms
+- Movement: constant translations, sine movement, ping-pong movement  
+- Rotation: constant spin, quantized spin, interval spin
 
-Character Controller and Input Handling
+### Character Controller & Input
+- Basic character controllers 
+- Input handling utilities  
 
-Component Management
+### Component Management
+- Easy toggling, enabling/disabling, and setup helpers  
 
-Utilities for images
-
-
-
+### Utilities
+- Image utilities and helpers  
+- General quality-of-life scripts  
