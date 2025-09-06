@@ -1,3 +1,4 @@
+// !!!ID: 1cd60119e8bf45af9357a9460995f3ee
 // File: BasicsScriptFinder.cs
 #if UNITY_EDITOR
 using System;
@@ -25,6 +26,10 @@ public class BasicsScriptFinder : EditorWindow {
     }
 
     private readonly List<Match> results = new List<Match>();
+
+    private void FindRoot() {
+        //look for file that's called basics_root_finder.txt
+    }
 
     [MenuItem("Basics/Search")]
     public static void Open() {

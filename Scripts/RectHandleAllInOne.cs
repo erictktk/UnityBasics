@@ -1,3 +1,4 @@
+// !!!ID: 5a7bde3dc70743aa9a2de0c07067f9c8
 // RectEdgeHandle.cs
 // Drag LEFT/RIGHT/TOP/BOTTOM independently (like Unity's Rect Tool).
 // Works in XY, supports Z-rotation. Min-size respected.

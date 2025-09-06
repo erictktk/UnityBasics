@@ -1,3 +1,4 @@
+// !!!ID: 0b633f0771fe420fbf1d6f30e93c6f69
 /*
  * TypewriterFromSourceText (UI)
  * -----------------------------
@@ -14,7 +15,7 @@
  *
  * Implementation:
  * - Forces TMP layout on the source.
- * - Inserts '\n' at the source’s computed line breaks.
+ * - Inserts '\n' at the sourceï¿½s computed line breaks.
  * - Reveals text gradually via maxVisibleCharacters.
  */
 
