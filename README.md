@@ -39,7 +39,7 @@ A lightweight library of scripts to cover basic Unity functionality and help you
 
 
 ## Search Tool
-![Unity Basics](https://github.com/erictktk/UnityBasics/blob/master/unity%20basics.png)
+![Unity Basics](https://github.com/erictktk/UnityBasics/blob/master/search_preview.png)
 
 #### Found under Basics > Search
 
