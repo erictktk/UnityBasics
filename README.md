@@ -6,17 +6,17 @@ A lightweight library of scripts to cover basic Unity functionality and help you
 
 ## Includes
 
-### Transforms
+#### Transforms
 - Movement: constant translations, sine movement, ping-pong movement  
 - Rotation: constant spin, quantized spin, interval spin
 
-### Character Controller & Input
+#### Character Controller & Input
 - Basic character controllers 
 - Input handling utilities  
 
-### Component Management
+#### Component Management
 - Easy toggling, enabling/disabling, and setup helpers  
 
-### Utilities
+#### Utilities
 - Image utilities and helpers  
 - General quality-of-life scripts  
