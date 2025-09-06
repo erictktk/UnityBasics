@@ -1,6 +1,6 @@
 # Unity Basics
 
-![Unity Basics](https://github.com/erictktk/UnityBasics/blob/master/unity%20basics.png)
+![Unity Basics](https://github.com/erictktk/UnityBasics/blob/master/unity_basics_orig.png)
 
 A lightweight library of scripts to cover basic Unity functionality and help you prototype faster.
 50~ scripts with documentation.
