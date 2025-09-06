@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Reflection;
 
 
-// Summary:
+// !!!Summary:
 // HueRotateUI cycles the hue of a UI element’s color over time.
 // - Supports two modes:
 //   1. Graphic: Directly modifies a UnityEngine.UI.Graphic component’s color.

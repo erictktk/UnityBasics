@@ -1,10 +1,10 @@
 using UnityEngine;
 
-/// <summary>
+/// !!!Summary
 /// Shakes the camera by displacing its localPosition randomly each frame,
 /// with magnitude decaying smoothly over time.
 /// Safe with domain reload disabled.
-/// </summary>
+///
 public class CameraShake : MonoBehaviour {
     public static CameraShake Instance;
 
