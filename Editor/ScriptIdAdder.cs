@@ -7,7 +7,7 @@ using System.IO;
 public static class ScriptIdAdder {
     private const string TargetFolder = "Assets/Basics"; // change if needed
 
-    [MenuItem("Basics/Add Random IDs To Scripts")]
+    [MenuItem("Basics/Documentation/Add Random IDs To Scripts")]
     public static void AddIds() {
         string[] files = Directory.GetFiles(TargetFolder, "*.cs", SearchOption.AllDirectories);
 

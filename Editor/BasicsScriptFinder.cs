@@ -27,8 +27,24 @@ public class BasicsScriptFinder : EditorWindow {
 
     private readonly List<Match> results = new List<Match>();
 
-    private void FindRoot() {
+    private string FindRoot() {
         //look for file that's called basics_root_finder.txt
+        var rootAssetFolder = "Assets";
+        var guids = AssetDatabase.FindAssets("basics_root_finder_helper t:TextAsset", new[] { "Assets" }); // is this recursive?
+        //should only be one
+        if (guids.Length > 0) {
+            var path = AssetDatabase.GUIDToAssetPath(guids[0]);
+            rootAssetFolder = Path.GetDirectoryName(path);
+
+            Debug.Log($"[Basics Script Finder] Found basics root folder: {rootAssetFolder}");
+            //is this entire path?
+            return rootAssetFolder.Replace("\\", "/");
+        }
+        else {
+            Debug.LogWarning("[Basics Script Finder] Could not find basics_root_finder.txt, defaulting to Assets/Basics");
+            return "Assets/Basics";
+        }
+
     }
 
     [MenuItem("Basics/Search")]

@@ -3,13 +3,13 @@ using PlasticGui.WorkspaceWindow.PendingChanges;
 using UnityEngine;
 
 namespace Basics {
-    public class SimpleMover : MonoBehaviour {
+    public class MoverSimple : MonoBehaviour {
 
         [Tooltip("Use reference to just update movement from a referent script")]
         public enum MoveMode { Simple, UseReference };
         public MoveMode moveMode = MoveMode.Simple;
         [ConditionalHide("moveMode", (int)MoveMode.UseReference)]
-        public SimpleMover reference;
+        public MoverSimple reference;
 
         public Vector3 direction = Vector3.right;
         public float speed = 1f;
