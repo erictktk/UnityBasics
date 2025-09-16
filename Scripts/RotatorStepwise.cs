@@ -1,8 +1,18 @@
 // !!!ID: dda475f764aa47b1bbfdf2ff57613cab
 using UnityEngine;
 
-namespace Basics {
-    public class RotatorStepwise : MonoBehaviour {
+/// <summary>
+/// Rotates a GameObject in discrete steps after a pause interval.
+/// - Axis: choose X, Y, or Z for rotation axis.
+/// - RotationMode:
+///     - FixedAngle: applies the same angle every step.
+///     - RandomRange: picks a random angle within [minAngle, maxAngle].
+/// - pauseDuration defines the wait time between each rotation step.
+/// </summary>
+namespace Basics
+{
+    public class RotatorStepwise : MonoBehaviour
+    {
         public enum Axis { X, Y, Z }
         public enum RotationMode { FixedAngle, RandomRange }
 
@@ -20,9 +30,11 @@ namespace Basics {
 
         private float timer;
 
-        void Update() {
+        void Update()
+        {
             timer += Time.deltaTime;
-            if (timer >= pauseDuration) {
+            if (timer >= pauseDuration)
+            {
                 float angle = mode == RotationMode.FixedAngle
                     ? fixedAngle
                     : Random.Range(minAngle, maxAngle);
@@ -32,9 +44,11 @@ namespace Basics {
             }
         }
 
-        void ApplyRotation(float angle) {
+        void ApplyRotation(float angle)
+        {
             Vector3 euler = transform.eulerAngles;
-            switch (axis) {
+            switch (axis)
+            {
                 case Axis.X: euler.x += angle; break;
                 case Axis.Y: euler.y += angle; break;
                 case Axis.Z: euler.z += angle; break;

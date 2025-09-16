@@ -1,0 +1,222 @@
+### TypeWriterFromSource.cs
+No summary found in TypeWriterFromSource.cs.
+
+### NewBehaviourScript.cs
+No summary found in NewBehaviourScript.cs.
+
+### AlignToCamera.cs
+No summary found in AlignToCamera.cs.
+
+### AlignToCameraZX.cs
+No summary found in AlignToCameraZX.cs.
+
+### BasicsScriptFinder.cs
+No summary found in BasicsScriptFinder.cs.
+
+### CenterChildrenUnderParent.cs
+No summary found in CenterChildrenUnderParent.cs.
+
+### ConditionalHideDrawer.cs
+No summary found in ConditionalHideDrawer.cs.
+
+### CustomDuplicate.cs
+No summary found in CustomDuplicate.cs.
+
+### DepthSorterWindow.cs
+No summary found in DepthSorterWindow.cs.
+
+### ImageTest.cs
+No summary found in ImageTest.cs.
+
+### LevelToolsMenu.cs
+No summary found in LevelToolsMenu.cs.
+
+### LevelToolsSort.cs
+No summary found in LevelToolsSort.cs.
+
+### ParameterDriverEditor.cs
+No summary found in ParameterDriverEditor.cs.
+
+### ParameterDriverTransformEditor.cs
+No summary found in ParameterDriverTransformEditor.cs.
+
+### ScriptIdAdder.cs
+No summary found in ScriptIdAdder.cs.
+
+### SummaryGetter.cs
+for (int i = 0; i < lines.Length; i++) { if (lines[i].Contains(" <summary>")) { string summary = ""; for (int j = i + 1; j < lines.Length; j++) {
+
+### PseudoFabMarker.cs
+No summary found in PseudoFabMarker.cs.
+
+### PseudoFabUtils.cs
+No summary found in PseudoFabUtils.cs.
+
+### AnimatorSimple.cs
+Cycles through a list of sprites, either on a constant timer or custom per-frame timings. Supports pause/resume. Intended for use with Image or SpriteRenderer.
+
+### Billboard.cs
+No summary found in Billboard.cs.
+
+### CameraFollow2D.cs
+No summary found in CameraFollow2D.cs.
+
+### CameraShake.cs
+Shakes the camera by displacing its localPosition randomly each frame, with magnitude decaying smoothly over time. Safe with domain reload disabled.
+
+### CharacterKill.cs
+No summary found in CharacterKill.cs.
+
+### ColorChannelSetter.cs
+No summary found in ColorChannelSetter.cs.
+
+### ConditionalHideAttribute.cs
+Custom property attribute for conditionally hiding fields in the Unity Inspector. Supports two modes: - Boolean field: shows the property if the condition field is true. - Integer/Enum field: shows the property if the condition field equals a given compareValue.
+
+### DaylightColorController.cs
+No summary found in DaylightColorController.cs.
+
+### DestroyAfterDelay.cs
+Destroys the GameObject after a specified delay. Can start automatically on Start (Automatic mode) or manually via StartCountdown (Set mode). Uses Update to track elapsed time and triggers Destroy when delay is reached.
+
+### EnableComponentOnDistance.cs
+No summary found in EnableComponentOnDistance.cs.
+
+### FlashAlphaUI.cs
+UI component that flashes the alpha of a Graphic element. Supports single flashes, repeated flashes, and looping with delay. Can start flashing automatically on Awake if enabled. Uses a sawtooth interpolation to fade between original alpha and target alpha.
+
+### FlashWhite.cs
+SpriteRenderer effect that flashes the target white. Supports single flashes, repeated flashes, and looping with a delay. Can start automatically on Awake if enabled. Interpolates color between the original and white over the flash duration, then restores the original color when finished.
+
+### FlashWhiteUI.cs
+No summary found in FlashWhiteUI.cs.
+
+### FollowTarget.cs
+No summary found in FollowTarget.cs.
+
+### GenericAnimation.cs
+Generic sprite animation component for 2D objects. - Stores multiple animations, each with a name and sprite list. - Supports two framerate modes: - Universal: all animations use the same fps. - Multiple: each animation has its own fps. - Automatically cycles frames and updates the SpriteRenderer. - Provides Play(name) to switch animations by name. - Allows adding sprites to animations at runtime.
+
+### GenericAnimationEditor.cs
+No summary found in GenericAnimationEditor.cs.
+
+### HealthGUIBar.cs
+HealthBar — A flexible health bar component for Unity UI.  Features: - Scales a RectTransform along X or Y to represent health percentage. - Direct setters: - SetPercentage(float percent) - SetFromValues(float current, float total) - Incrementing: - IncrementByPercentage(float deltaPercent) - IncrementByValue(float delta, float max) - Smooth changes over time using coroutines: - SmoothChangeByPercentage(float deltaPercent, float duration) - SmoothChangeByValue(float delta, float max, float duration)  Internally: - Tracks currentHealth and totalHealth. - Updates bar scale automatically when values change.
+
+### HSLDriver.cs
+No summary found in HSLDriver.cs.
+
+### HSLImpulseDriver.cs
+No summary found in HSLImpulseDriver.cs.
+
+### HueRotateUI.cs
+HueRotateUI cycles the hue of a UI element�s color over time. - Supports two modes: 1. Graphic: Directly modifies a UnityEngine.UI.Graphic component�s color. 2. Reflection: Uses reflection to modify a specified Color property or field on another component. - Fields include configurable delay, speed, and the reflection field/property name. - Rotates hue continuously in Update() after the delay has elapsed.
+
+### LookAtMouse2D.cs
+No summary found in LookAtMouse2D.cs.
+
+### MassAssigner.cs
+MassAssigner is a Unity editor utility that applies randomized float values to a specified field or property across all child components of the same type as a given reference component. - Uses reflection to find fields or properties with the given name. - Random values are seeded and only re-applied if the seed changes. - Works in edit mode for quick bulk adjustments in the inspector.
+
+### MaterialFloatDriver.cs
+No summary found in MaterialFloatDriver.cs.
+
+### MaterialFloatDriverUI.cs
+No summary found in MaterialFloatDriverUI.cs.
+
+### MaterialScroller.cs
+No summary found in MaterialScroller.cs.
+
+### MeshCycler.cs
+Cycles through a list of mesh GameObjects over time. You can use either a constant interval or per-mesh custom timings. Only one mesh is active at a time.
+
+### MoverInert.cs
+Moves a GameObject in a given direction with inertial slowdown. - Starts at the given speed and applies exponential drag over time. - Uses Update to move the transform position each frame. - DragCoefficient controls how quickly the object slows down.
+
+### MoverSimple.cs
+Simple mover component for translating a GameObject in a given direction. Modes: - Simple: moves using its own direction and speed. - UseReference: moves using the direction of another MoverSimple reference. Updates position every frame in Update.
+
+### ParameterDriver.cs
+No summary found in ParameterDriver.cs.
+
+### ParameterDriverTransform.cs
+No summary found in ParameterDriverTransform.cs.
+
+### PitchModulator.cs
+Continuously modulates the pitch of an AudioSource using an AnimationCurve. - Ensures the AudioSource is playing and looping on Start. - Uses cycleDuration to determine the time span of one curve cycle. - Applies pitch offset scaled by the given factor.
+
+### PlaceAtMouseDirection.cs
+Positions a GameObject in the direction of the mouse from a given origin. - Converts screen mouse position to world space using a camera. - Limits placement distance to a maximum radius from the origin. - Defaults origin to self and camera to Camera.main if not assigned.
+
+### PlaceOnMouse.cs
+Moves a GameObject to the mouse position in world space. - Converts screen coordinates to world using the assigned camera (defaults to Camera.main). - Keeps correct depth by using the distance between camera and object.
+
+### PlaySoundAfterDelay.cs
+No summary found in PlaySoundAfterDelay.cs.
+
+### RectHandleAllInOne.cs
+No summary found in RectHandleAllInOne.cs.
+
+### RotateConstantly.cs
+Rotates constantly using either Continuous or Discrete mode.
+
+### RotatePauseRotate.cs
+Rotates a GameObject around a chosen axis, alternating between rotation and pause phases. - Axis can be X, Y, Z, or a custom vector. - Rotation speed set by revolutions per second. - rotateDuration controls how long it rotates before pausing. - pauseDuration controls how long it waits before resuming rotation.
+
+### RotatorStepwise.cs
+Rotates a GameObject in discrete steps after a pause interval. - Axis: choose X, Y, or Z for rotation axis. - RotationMode: - FixedAngle: applies the same angle every step. - RandomRange: picks a random angle within [minAngle, maxAngle]. - pauseDuration defines the wait time between each rotation step.
+
+### ScaleStepWise.cs
+No summary found in ScaleStepWise.cs.
+
+### SpawnWithKeyDown.cs
+Spawns a prefab when a specified key is pressed. - Key is configurable (default: Space). - OffsetMode: - Constant: uses a fixed offset vector. - RandomUnitCircle: spawns at a random offset within a unit circle. - Instantiates the prefab at (transform.position + offset) with no rotation.
+
+### SweepMesh.cs
+No summary found in SweepMesh.cs.
+
+### TeleportToTarget.cs
+No summary found in TeleportToTarget.cs.
+
+### ToggleAfterDelay.cs
+No summary found in ToggleAfterDelay.cs.
+
+### ToggleChildrenOff.cs
+No summary found in ToggleChildrenOff.cs.
+
+### ToggleComponentOnOff.cs
+Toggles a Behaviour component on after a delay, then off after another delay. - Disables the component at Start. - Enables it after onDelay seconds. - Disables it again after offDelay seconds, then stops running the script.
+
+### ToggleMultipleTimes.cs
+No summary found in ToggleMultipleTimes.cs.
+
+### ToggleOff.cs
+No summary found in ToggleOff.cs.
+
+### ToggleOn.cs
+No summary found in ToggleOn.cs.
+
+### ToggleWithKey.cs
+No summary found in ToggleWithKey.cs.
+
+### ToggleWithPeriods.cs
+Toggles a specified GameObject on and off in repeating periods. - Off duration is fixed (offPeriod). - On durations cycle through values in onPeriods (or fallback if empty). - Optionally starts with a random offset into the off period. - Requires an explicit target GameObject to toggle.
+
+### TopDownMovement2D.cs
+No summary found in TopDownMovement2D.cs.
+
+### UVOffset.cs
+Continuously offsets the UV coordinates of a material to create scrolling or stepped texture movement. - Can run continuously with uvSpeed or in discrete steps with stepSize and stepInterval. - Supports using the main texture offset or a custom shader property. - Updates the material’s texture offset every frame.
+
+### VerticalMenu.cs
+No summary found in VerticalMenu.cs.
+
+### TreeSnowController.cs
+No summary found in TreeSnowController.cs.
+
+### ParserToJSON.cs
+No summary found in ParserToJSON.cs.
+
+### PseudoFabEditor.cs
+No summary found in PseudoFabEditor.cs.
+

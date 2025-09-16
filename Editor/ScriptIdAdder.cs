@@ -1,5 +1,5 @@
 // !!!ID: b748869d0dc44efcbf155cfe368bc563
-#if UNITY_EDITOR
+
 using UnityEngine;
 using UnityEditor;
 using System.IO;
@@ -32,4 +32,3 @@ public static class ScriptIdAdder {
         AssetDatabase.Refresh();
     }
 }
-#endif

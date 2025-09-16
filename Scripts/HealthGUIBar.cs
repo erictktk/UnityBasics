@@ -3,27 +3,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-/* !!!SUMMARY
- * HealthBar
- * ---------
- * A flexible health bar component for Unity UI.
- *
- * Features:
- * - Scales a RectTransform along X or Y to represent health percentage.
- * - Direct setters:
- *     - SetPercentage(float percent)
- *     - SetFromValues(float current, float total)
- * - Incrementing:
- *     - IncrementByPercentage(float deltaPercent)
- *     - IncrementByValue(float delta, float max)
- * - Smooth changes over time using coroutines:
- *     - SmoothChangeByPercentage(float deltaPercent, float duration)
- *     - SmoothChangeByValue(float delta, float max, float duration)
- *
- * Internally:
- * - Tracks currentHealth and totalHealth.
- * - Updates bar scale automatically when values change.
- */
+/// <summary>
+/// HealthBar — A flexible health bar component for Unity UI.
+///
+/// Features:
+/// - Scales a RectTransform along X or Y to represent health percentage.
+/// - Direct setters:
+///     - SetPercentage(float percent)
+///     - SetFromValues(float current, float total)
+/// - Incrementing:
+///     - IncrementByPercentage(float deltaPercent)
+///     - IncrementByValue(float delta, float max)
+/// - Smooth changes over time using coroutines:
+///     - SmoothChangeByPercentage(float deltaPercent, float duration)
+///     - SmoothChangeByValue(float delta, float max, float duration)
+///
+/// Internally:
+/// - Tracks currentHealth and totalHealth.
+/// - Updates bar scale automatically when values change.
+/// </summary>
 
 namespace Basics {
     public class HealthBar : MonoBehaviour {

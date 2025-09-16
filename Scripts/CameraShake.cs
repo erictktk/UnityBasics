@@ -1,24 +1,28 @@
 // !!!ID: 887beb33893144b28f7fa17f771e554b
 using UnityEngine;
 
-/// !!!Summary
+/// <summary>
 /// Shakes the camera by displacing its localPosition randomly each frame,
 /// with magnitude decaying smoothly over time.
 /// Safe with domain reload disabled.
-///
+/// </summary>
 public class CameraShake : MonoBehaviour {
     public static CameraShake Instance;
 
     private Vector3 originalPos;
     private float shakeMagnitude = 0f;
     public float dampingSpeed = 1.0f;
+    private float originalDampingSpeed;
 
-    void Awake() {
-        if (Instance != null && Instance != this) {
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
             Destroy(gameObject);
             return;
         }
         Instance = this;
+        originalDampingSpeed = dampingSpeed;
     }
 
     void OnEnable() {
@@ -41,11 +45,18 @@ public class CameraShake : MonoBehaviour {
         }
     }
 
+    public void ResetDampingSpeed() {
+        dampingSpeed = originalDampingSpeed;
+    }
+
     /// <summary>
     /// Trigger a camera shake.
     /// </summary>
     /// <param name="magnitude">How strong the shake starts.</param>
-    public void Shake(float magnitude) {
+    public void Shake(float magnitude, float? dampingSpeed = null)
+    {
         shakeMagnitude = magnitude;
+        if (dampingSpeed.HasValue)
+            this.dampingSpeed = dampingSpeed.Value;
     }
 }

@@ -4,13 +4,14 @@ using UnityEngine.UI;
 using System.Reflection;
 
 
-// !!!Summary:
-// HueRotateUI cycles the hue of a UI element�s color over time.
-// - Supports two modes:
-//   1. Graphic: Directly modifies a UnityEngine.UI.Graphic component�s color.
-//   2. Reflection: Uses reflection to modify a specified Color property or field on another component.
-// - Fields include configurable delay, speed, and the reflection field/property name.
-// - Rotates hue continuously in Update() after the delay has elapsed.
+/// <summary>
+/// HueRotateUI cycles the hue of a UI element�s color over time.
+/// - Supports two modes:
+///   1. Graphic: Directly modifies a UnityEngine.UI.Graphic component�s color.
+///   2. Reflection: Uses reflection to modify a specified Color property or field on another component.
+/// - Fields include configurable delay, speed, and the reflection field/property name.
+/// - Rotates hue continuously in Update() after the delay has elapsed.
+/// </summary>
 
 namespace Basics {
     public class HueRotateUI : MonoBehaviour {

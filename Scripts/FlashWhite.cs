@@ -1,8 +1,17 @@
 // !!!ID: f519c2390f2042378b2b73d2a2b56a55
 using UnityEngine;
 
-namespace Basics {
-    public class FlashWhite : MonoBehaviour {
+/// <summary>
+/// SpriteRenderer effect that flashes the target white.
+/// Supports single flashes, repeated flashes, and looping with a delay.
+/// Can start automatically on Awake if enabled.
+/// Interpolates color between the original and white over the flash duration,
+/// then restores the original color when finished.
+/// </summary>
+namespace Basics
+{
+    public class FlashWhite : MonoBehaviour
+    {
         public SpriteRenderer target;
         public float flashDuration = 0.5f;
         public float loopDelay = 1f;
@@ -14,25 +23,30 @@ namespace Basics {
         private bool isFlashing = false;
         private bool isLooping = false;
 
-        void Start() {
+        void Start()
+        {
             if (target == null) target = GetComponent<SpriteRenderer>();
             originalColor = target.color;
             if (flashOnAwake) Flash(1);
         }
 
-        void Update() {
-            if (!isFlashing && isLooping) {
+        void Update()
+        {
+            if (!isFlashing && isLooping)
+            {
                 timer += Time.deltaTime;
                 if (timer >= loopDelay) Flash(1);
                 return;
             }
 
-            if (isFlashing) {
+            if (isFlashing)
+            {
                 timer += Time.deltaTime;
                 float t = Mathf.Clamp01(timer / flashDuration);
                 target.color = Color.Lerp(originalColor, Color.white, t);
 
-                if (timer >= flashDuration) {
+                if (timer >= flashDuration)
+                {
                     target.color = originalColor;
                     isFlashing = false;
                     timer = 0f;
@@ -41,19 +55,22 @@ namespace Basics {
             }
         }
 
-        public void Flash(int n) {
+        public void Flash(int n)
+        {
             if (n <= 0) return;
             flashesRemaining = n - 1;
             isFlashing = true;
             timer = 0f;
         }
 
-        public void StartFlashing() {
+        public void StartFlashing()
+        {
             isLooping = true;
             timer = loopDelay; // trigger immediately
         }
 
-        public void StopFlashing() {
+        public void StopFlashing()
+        {
             isLooping = false;
         }
     }

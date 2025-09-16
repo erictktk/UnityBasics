@@ -1,8 +1,17 @@
 // !!!ID: 0b3c4e4bdf384fec9c39b04c269d510e
 using UnityEngine;
 
-namespace Basics {
-    public class PlaceAtMouseDirection : MonoBehaviour {
+/// <summary>
+/// Positions a GameObject in the direction of the mouse from a given origin.
+/// - Converts screen mouse position to world space using a camera.
+/// - Limits placement distance to a maximum radius from the origin.
+/// - Defaults origin to self and camera to Camera.main if not assigned.
+/// </summary>
+
+namespace Basics
+{
+    public class PlaceAtMouseDirection : MonoBehaviour
+    {
         [Tooltip("Origin point from which direction is measured")]
         public Transform origin;
         [Tooltip("Maximum distance from origin")]
@@ -10,12 +19,14 @@ namespace Basics {
         [Tooltip("Camera used for screen-to-world conversion")]
         public Camera cam;
 
-        void Start() {
+        void Start()
+        {
             if (origin == null) origin = transform;
             if (cam == null) cam = Camera.main;
         }
 
-        void Update() {
+        void Update()
+        {
             Vector3 mousePos = Input.mousePosition;
             // Set z so ScreenToWorldPoint projects onto plane of origin
             mousePos.z = Mathf.Abs(cam.transform.position.z - origin.position.z);

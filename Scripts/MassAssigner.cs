@@ -4,15 +4,13 @@ using System;
 using System.Reflection;
 using System.Collections.Generic;
 
-/*
-!!! Summary
-MassAssigner is a Unity editor utility that applies randomized float values to a specified field
-or property across all child components of the same type as a given reference component.
-- Uses reflection to find fields or properties with the given name.
-- Random values are seeded and only re-applied if the seed changes.
-- Works in edit mode for quick bulk adjustments in the inspector.
-*/
-
+/// <summary>
+/// MassAssigner is a Unity editor utility that applies randomized float values to a specified
+/// field or property across all child components of the same type as a given reference component.
+/// - Uses reflection to find fields or properties with the given name.
+/// - Random values are seeded and only re-applied if the seed changes.
+/// - Works in edit mode for quick bulk adjustments in the inspector.
+/// </summary>
 
 namespace Basics {
     [ExecuteInEditMode]

@@ -2,8 +2,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Basics {
-    public class FlashAlphaUI : MonoBehaviour {
+/// <summary>
+/// UI component that flashes the alpha of a Graphic element.
+/// Supports single flashes, repeated flashes, and looping with delay.
+/// Can start flashing automatically on Awake if enabled.
+/// Uses a sawtooth interpolation to fade between original alpha and target alpha.
+/// </summary>
+namespace Basics
+{
+    public class FlashAlphaUI : MonoBehaviour
+    {
         public Graphic target;
         public float flashDuration = 0.5f;
         public float loopDelay = 1f;
@@ -17,31 +25,36 @@ namespace Basics {
         private bool isLooping = false;
         private Color targetColor;
 
-        void Start() {
+        void Start()
+        {
             if (target == null) target = GetComponent<Graphic>();
             originalColor = target.color;
             targetColor = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
             if (flashOnAwake) Flash(1);
 
-           
+
         }
 
-        void Update() {
-            if (!isFlashing && isLooping) {
+        void Update()
+        {
+            if (!isFlashing && isLooping)
+            {
                 timer += Time.deltaTime;
                 if (timer >= loopDelay) Flash(1);
                 return;
             }
 
-            if (isFlashing) {
+            if (isFlashing)
+            {
                 timer += Time.deltaTime;
                 // we need to make this saw tooth
                 float t = Mathf.Clamp01(timer / flashDuration);
                 if (t > 0.5f) t = 1f - t;
                 // scale to 0-1
-                target.color = Color.Lerp(originalColor, targetColor, t*2f);
+                target.color = Color.Lerp(originalColor, targetColor, t * 2f);
 
-                if (timer >= flashDuration) {
+                if (timer >= flashDuration)
+                {
                     target.color = originalColor;
                     isFlashing = false;
                     timer = 0f;
@@ -50,19 +63,22 @@ namespace Basics {
             }
         }
 
-        public void Flash(int n) {
+        public void Flash(int n)
+        {
             if (n <= 0) return;
             flashesRemaining = n - 1;
             isFlashing = true;
             timer = 0f;
         }
 
-        public void StartFlashing() {
+        public void StartFlashing()
+        {
             isLooping = true;
             timer = loopDelay;
         }
 
-        public void StopFlashing() {
+        public void StopFlashing()
+        {
             isLooping = false;
         }
     }

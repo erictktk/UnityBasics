@@ -1,8 +1,17 @@
 // !!!ID: 7ca5cf97dae0415d9f016d54bcf64542
 using UnityEngine;
 
-namespace Basics {
-    public class RotatePauseRotate : MonoBehaviour {
+/// <summary>
+/// Rotates a GameObject around a chosen axis, alternating between rotation and pause phases.
+/// - Axis can be X, Y, Z, or a custom vector.
+/// - Rotation speed set by revolutions per second.
+/// - rotateDuration controls how long it rotates before pausing.
+/// - pauseDuration controls how long it waits before resuming rotation.
+/// </summary>
+namespace Basics
+{
+    public class RotatePauseRotate : MonoBehaviour
+    {
         public enum Axis { X, Y, Z, Custom }
 
         public Axis axis = Axis.Z;
@@ -15,8 +24,10 @@ namespace Basics {
         private bool rotating = true;
         private Vector3 currentAxis;
 
-        void Start() {
-            currentAxis = axis switch {
+        void Start()
+        {
+            currentAxis = axis switch
+            {
                 Axis.X => Vector3.right,
                 Axis.Y => Vector3.up,
                 Axis.Z => Vector3.forward,
@@ -25,20 +36,25 @@ namespace Basics {
             };
         }
 
-        void Update() {
+        void Update()
+        {
             timer += Time.deltaTime;
 
-            if (rotating) {
+            if (rotating)
+            {
                 float degreesPerSecond = revolutionsPerSecond * 360f;
                 transform.Rotate(currentAxis * degreesPerSecond * Time.deltaTime);
 
-                if (timer >= rotateDuration) {
+                if (timer >= rotateDuration)
+                {
                     timer = 0f;
                     rotating = false;
                 }
             }
-            else {
-                if (timer >= pauseDuration) {
+            else
+            {
+                if (timer >= pauseDuration)
+                {
                     timer = 0f;
                     rotating = true;
                 }
