@@ -2,6 +2,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Flashes a UI Graphic by lerping its color to white and back  
+/// Supports single or multiple flashes, looping with delay, and auto-flash on Awake  
+/// Restores the original color when flashing completes  
+/// </summary>
 namespace Basics {
     public class FlashWhiteUI : MonoBehaviour {
         public Graphic target;

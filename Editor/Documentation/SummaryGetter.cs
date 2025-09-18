@@ -14,8 +14,10 @@ public static class ScriptSummaryCollector {
 
         foreach (var file in files) {
             string[] lines = File.ReadAllLines(file);
+            string id = ExtractID(lines, Path.GetFileName(file));
             string summary = ExtractSummary(lines, Path.GetFileName(file));
             sb.AppendLine($"### {Path.GetFileName(file)}");
+            sb.AppendLine(id);
             sb.AppendLine(summary);
             sb.AppendLine();
         }
@@ -25,6 +27,17 @@ public static class ScriptSummaryCollector {
         AssetDatabase.Refresh();
 
         Debug.Log($"Summaries collected in {outputPath}");
+    }
+
+    private static string ExtractID(string[] lines, string filename) {
+        // Look for the line with "!!!ID: <id>"
+        foreach (var line in lines) {
+            if (line.Contains("!!!ID:")) {
+                int idx = line.IndexOf("!!!ID:") + "!!!ID:".Length;
+                return line.Substring(idx).Trim();
+}
+        }
+        return $"No ID found in {filename}.";
     }
 
     private static string ExtractSummary(string[] lines, string filename) {

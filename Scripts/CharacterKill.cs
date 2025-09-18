@@ -1,6 +1,14 @@
 // !!!ID: 1271fe1c99014562bfae320a1282da4f
 using UnityEngine;
 
+
+/// <summary>
+/// Spawns a prefab at the character’s position on trigger enter  
+/// Disables the character GameObject after spawning  
+/// Filters collisions by none, enemy layer, or custom layer  
+/// Handles death or removal behavior in a controlled way  
+/// </summary>
+
 namespace Basics {
     public class CharacterKill : MonoBehaviour {
         public GameObject prefabToSpawn;

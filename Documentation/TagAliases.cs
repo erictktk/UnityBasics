@@ -16,7 +16,17 @@ public static class TagAliases {
         { "material", new HashSet<string>{ "material","materials","shader","uv","texture","tex" } },
         { "editor", new HashSet<string>{ "editor","inspector","drawer","menu","window","tool" } },
         { "animation", new HashSet<string>{ "animation","animate","animating","animated","anim" } },
-        { "mover", new HashSet<string>{ "movement", "move" } }
+        { "mover", new HashSet<string>{ "movement", "move" } },
+        { "tool", new HashSet<string> { "tools", "editor" } },
+        { "game", new HashSet<string> { } },
+        { "health", new HashSet<string> {"game" } },
+        { "typing", new HashSet<string> {"ui", "dialogue", "type", "text" } },
+        { "align", new HashSet<string> {"alignment" } },
+        { "parameter", new HashSet<string> {"driver", "parameters" } },
+        { "hierarchy", new HashSet<string> {"tool", "tools", "organization" } },
+        { "organization", new HashSet<string> {"organize" } },
+        { "spawn", new HashSet<string> {"spawner", "spawning" } },
+        { "place", new HashSet<string> {"placer", "placing", "scene" } },
     };
 
     // Expand a query term to all aliases (fallback to itself).

@@ -3,6 +3,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
+
+/// <summary>
+/// Animates a float material property on a UI Graphic over time  
+/// Supports delay, duration, and auto-stop timing  
+/// Provides easing options including custom curves  
+/// Interpolates between defined from/to values each frame  
+/// </summary>
 public class MaterialFloatDriverUI : MonoBehaviour {
     public enum EaseType {
         Linear, EaseIn, EaseOut, EaseInOut,

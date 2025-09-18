@@ -1,222 +1,312 @@
 ### TypeWriterFromSource.cs
+0b633f0771fe420fbf1d6f30e93c6f69
 No summary found in TypeWriterFromSource.cs.
 
 ### NewBehaviourScript.cs
+No ID found in NewBehaviourScript.cs.
 No summary found in NewBehaviourScript.cs.
 
+### TagAliases.cs
+No ID found in TagAliases.cs.
+No summary found in TagAliases.cs.
+
 ### AlignToCamera.cs
-No summary found in AlignToCamera.cs.
+e775f2090a534c8784250063368d941b
+Provides editor menu items for aligning objects and the SceneView to cameras. - Align Selected to Scene Camera: moves selected objects to the SceneView camera's position. - Align Scene Camera To Main Camera: aligns the SceneView camera to the first active camera in the scene. Notes: * "Main Camera" here means the first Camera found with gameObject.activeInHierarchy == true. * Includes Undo support for object alignment and validation for menu availability.
 
 ### AlignToCameraZX.cs
+dde96e33fbac402f92cdf318a7548110
 No summary found in AlignToCameraZX.cs.
 
-### BasicsScriptFinder.cs
-No summary found in BasicsScriptFinder.cs.
-
 ### CenterChildrenUnderParent.cs
+955c9480d5354fa9b3ae6b02a9d01958
 No summary found in CenterChildrenUnderParent.cs.
 
 ### ConditionalHideDrawer.cs
+48e2d90e79d24420ad0c8b97b137ac98
 No summary found in ConditionalHideDrawer.cs.
 
+### ConfigInstaller.cs
+No ID found in ConfigInstaller.cs.
+Basics TMP Installer Window: shows banner, detects TMP, promotes .txt → .cs into Assets
+
 ### CustomDuplicate.cs
+a64c393cef744d359cb71343fc12ebbf
 No summary found in CustomDuplicate.cs.
 
 ### DepthSorterWindow.cs
+093ea202cca443b0b28b9a74ada89e51
 No summary found in DepthSorterWindow.cs.
 
 ### ImageTest.cs
+7b8da63584bf4dd2a5fbb7040cfe9e56
 No summary found in ImageTest.cs.
 
 ### LevelToolsMenu.cs
+No ID found in LevelToolsMenu.cs.
 No summary found in LevelToolsMenu.cs.
 
 ### LevelToolsSort.cs
+No ID found in LevelToolsSort.cs.
 No summary found in LevelToolsSort.cs.
 
 ### ParameterDriverEditor.cs
+88b935b054f54086aa2c447673a842fb
 No summary found in ParameterDriverEditor.cs.
 
 ### ParameterDriverTransformEditor.cs
+7da5de915caf42fe87078d9190203f99
 No summary found in ParameterDriverTransformEditor.cs.
 
 ### ScriptIdAdder.cs
+b748869d0dc44efcbf155cfe368bc563
 No summary found in ScriptIdAdder.cs.
 
-### SummaryGetter.cs
-for (int i = 0; i < lines.Length; i++) { if (lines[i].Contains(" <summary>")) { string summary = ""; for (int j = i + 1; j < lines.Length; j++) {
-
 ### PseudoFabMarker.cs
+No ID found in PseudoFabMarker.cs.
 No summary found in PseudoFabMarker.cs.
 
 ### PseudoFabUtils.cs
+No ID found in PseudoFabUtils.cs.
 No summary found in PseudoFabUtils.cs.
 
 ### AnimatorSimple.cs
+760693e2d4264f3ebcc4b4736794dffc
 Cycles through a list of sprites, either on a constant timer or custom per-frame timings. Supports pause/resume. Intended for use with Image or SpriteRenderer.
 
 ### Billboard.cs
-No summary found in Billboard.cs.
+4ff4de7a1f344edaacdb2331c3b69632
+Makes the GameObject always face the main camera by matching its forward vector to the camera�s forward direction. Runs in both play mode and edit mode.
 
 ### CameraFollow2D.cs
-No summary found in CameraFollow2D.cs.
+e97ae292805e4610b5645ba998f78761
+Simple 2D camera follow script. Follows a target with an optional offset, and can smoothly lag behind using interpolation if enabled.
 
 ### CameraShake.cs
+887beb33893144b28f7fa17f771e554b
 Shakes the camera by displacing its localPosition randomly each frame, with magnitude decaying smoothly over time. Safe with domain reload disabled.
 
 ### CharacterKill.cs
-No summary found in CharacterKill.cs.
+1271fe1c99014562bfae320a1282da4f
+Spawns a prefab at the character�s position on trigger enter Disables the character GameObject after spawning Filters collisions by none, enemy layer, or custom layer Handles death or removal behavior in a controlled way
 
 ### ColorChannelSetter.cs
-No summary found in ColorChannelSetter.cs.
+b309d0938ddb4676b44aa2b412e8624f
+Supports SpriteRenderer or UI Image on the same GameObject Overrides chosen RGBA channels with set values Preserves original values for channels not overridden Updates color every frame to apply the changes
 
 ### ConditionalHideAttribute.cs
+8921ddf4b9ce4905bd14149f60c4241f
 Custom property attribute for conditionally hiding fields in the Unity Inspector. Supports two modes: - Boolean field: shows the property if the condition field is true. - Integer/Enum field: shows the property if the condition field equals a given compareValue.
 
 ### DaylightColorController.cs
+8941f8ed6f54414a9c0d36580feb0dae
 No summary found in DaylightColorController.cs.
 
 ### DestroyAfterDelay.cs
+6574a42a4d1d43b8ae856ec47ebb0dda
 Destroys the GameObject after a specified delay. Can start automatically on Start (Automatic mode) or manually via StartCountdown (Set mode). Uses Update to track elapsed time and triggers Destroy when delay is reached.
 
 ### EnableComponentOnDistance.cs
-No summary found in EnableComponentOnDistance.cs.
+74e4143f046149fc80f01099531e1be2
+Enables or disables a specified component based on the distance to another Transform. Can trigger once or continuously loop depending on the 'loop' setting.
 
 ### FlashAlphaUI.cs
+4dfd56e48d0b4b5bbf0b900f7c3041d5
 UI component that flashes the alpha of a Graphic element. Supports single flashes, repeated flashes, and looping with delay. Can start flashing automatically on Awake if enabled. Uses a sawtooth interpolation to fade between original alpha and target alpha.
 
 ### FlashWhite.cs
+f519c2390f2042378b2b73d2a2b56a55
 SpriteRenderer effect that flashes the target white. Supports single flashes, repeated flashes, and looping with a delay. Can start automatically on Awake if enabled. Interpolates color between the original and white over the flash duration, then restores the original color when finished.
 
 ### FlashWhiteUI.cs
-No summary found in FlashWhiteUI.cs.
+0d8ec1435bfd466f96e71086038f0306
+Flashes a UI Graphic by lerping its color to white and back Supports single or multiple flashes, looping with delay, and auto-flash on Awake Restores the original color when flashing completes
 
 ### FollowTarget.cs
-No summary found in FollowTarget.cs.
+010157ad6d014e70bb4067048d8887f3
+Moves this GameObject toward a target Transform every frame with MoveTowards
+
+### FPSCounter.cs
+No ID found in FPSCounter.cs.
+Displays an on-screen FPS counter with frame time in milliseconds and frames per second. Optionally also shows the number of root GameObjects in the active scene.
 
 ### GenericAnimation.cs
+d4e302ec6c504214b857f1f36047e17b
 Generic sprite animation component for 2D objects. - Stores multiple animations, each with a name and sprite list. - Supports two framerate modes: - Universal: all animations use the same fps. - Multiple: each animation has its own fps. - Automatically cycles frames and updates the SpriteRenderer. - Provides Play(name) to switch animations by name. - Allows adding sprites to animations at runtime.
 
-### GenericAnimationEditor.cs
-No summary found in GenericAnimationEditor.cs.
-
 ### HealthGUIBar.cs
+616400dc5eec46e9af2c568faecc2766
 HealthBar — A flexible health bar component for Unity UI.  Features: - Scales a RectTransform along X or Y to represent health percentage. - Direct setters: - SetPercentage(float percent) - SetFromValues(float current, float total) - Incrementing: - IncrementByPercentage(float deltaPercent) - IncrementByValue(float delta, float max) - Smooth changes over time using coroutines: - SmoothChangeByPercentage(float deltaPercent, float duration) - SmoothChangeByValue(float delta, float max, float duration)  Internally: - Tracks currentHealth and totalHealth. - Updates bar scale automatically when values change.
 
 ### HSLDriver.cs
-No summary found in HSLDriver.cs.
+d476d719d87046e29f93a60820ed1d9d
+Drives HSL shader properties on a material in real time Updates tint color, hue shift, saturation, and luminance values Executes both in edit mode and play mode
 
 ### HSLImpulseDriver.cs
-No summary found in HSLImpulseDriver.cs.
+d64640de54394f778ee7bfdea7f28afd
+Pulses a material�s HSL property between base and peak luminance Supports single pulse or repeat mode with a set repeat count Uses coroutine timing based on a configurable period Resets property to its base value when finished
 
 ### HueRotateUI.cs
+3130d5fd82984e99999b4d91562957ec
 HueRotateUI cycles the hue of a UI element�s color over time. - Supports two modes: 1. Graphic: Directly modifies a UnityEngine.UI.Graphic component�s color. 2. Reflection: Uses reflection to modify a specified Color property or field on another component. - Fields include configurable delay, speed, and the reflection field/property name. - Rotates hue continuously in Update() after the delay has elapsed.
 
 ### LookAtMouse2D.cs
+f01a6c3e5cfa441884a1c8319673f27f
 No summary found in LookAtMouse2D.cs.
 
 ### MassAssigner.cs
+c12c59311cdd4f819864bf6af2899c5d
 MassAssigner is a Unity editor utility that applies randomized float values to a specified field or property across all child components of the same type as a given reference component. - Uses reflection to find fields or properties with the given name. - Random values are seeded and only re-applied if the seed changes. - Works in edit mode for quick bulk adjustments in the inspector.
 
 ### MaterialFloatDriver.cs
-No summary found in MaterialFloatDriver.cs.
+f10f3f4739324284a3941588dc2b4303
+Drives a material parameter (float or selected Vector4 components) over time Supports multiple drivers: ShiftConstant, Modulo, Periodic (sine), Switch, StepSmooth (curve), RandomStep Optional post-processing: Lerp remap and AnimationCurve shaping Per-driver delays, ranges, periods, and offsets for control Uses Renderer.material at runtime and a persistent coroutine update
 
 ### MaterialFloatDriverUI.cs
-No summary found in MaterialFloatDriverUI.cs.
+3edc2fbd1c624a73a96295a38810dfe1
+Animates a float material property on a UI Graphic over time Supports delay, duration, and auto-stop timing Provides easing options including custom curves Interpolates between defined from/to values each frame
 
 ### MaterialScroller.cs
+8f9244a42986497ea57541d3da0d0317
 No summary found in MaterialScroller.cs.
 
 ### MeshCycler.cs
+58a93395b35c49e6acf66a460958fb9c
 Cycles through a list of mesh GameObjects over time. You can use either a constant interval or per-mesh custom timings. Only one mesh is active at a time.
 
 ### MoverInert.cs
+c7dd0bf3b5e14cdebf17i715a75dbb75
 Moves a GameObject in a given direction with inertial slowdown. - Starts at the given speed and applies exponential drag over time. - Uses Update to move the transform position each frame. - DragCoefficient controls how quickly the object slows down.
 
 ### MoverSimple.cs
+c7dd0bf3b5e14cdebf170715275dbb75
 Simple mover component for translating a GameObject in a given direction. Modes: - Simple: moves using its own direction and speed. - UseReference: moves using the direction of another MoverSimple reference. Updates position every frame in Update.
 
 ### ParameterDriver.cs
+56f8add2ed8c489aa40aaf6965b4ccbf
 No summary found in ParameterDriver.cs.
 
 ### ParameterDriverTransform.cs
+99cc0f2b380e4dac9e72524e64008c8e
 No summary found in ParameterDriverTransform.cs.
 
 ### PitchModulator.cs
+929ecb3f10134c8094e4ba0671a65627
 Continuously modulates the pitch of an AudioSource using an AnimationCurve. - Ensures the AudioSource is playing and looping on Start. - Uses cycleDuration to determine the time span of one curve cycle. - Applies pitch offset scaled by the given factor.
 
 ### PlaceAtMouseDirection.cs
+0b3c4e4bdf384fec9c39b04c269d510e
 Positions a GameObject in the direction of the mouse from a given origin. - Converts screen mouse position to world space using a camera. - Limits placement distance to a maximum radius from the origin. - Defaults origin to self and camera to Camera.main if not assigned.
 
 ### PlaceOnMouse.cs
+303f59fec6184aad95fbef0277395d9f
 Moves a GameObject to the mouse position in world space. - Converts screen coordinates to world using the assigned camera (defaults to Camera.main). - Keeps correct depth by using the distance between camera and object.
 
 ### PlaySoundAfterDelay.cs
+d504c4d3cd22401d8a37e0d949a3e8c3
 No summary found in PlaySoundAfterDelay.cs.
 
 ### RectHandleAllInOne.cs
+5a7bde3dc70743aa9a2de0c07067f9c8
 No summary found in RectHandleAllInOne.cs.
 
 ### RotateConstantly.cs
+2bb94cf2a4e54d9dbfb08e5017701a78
 Rotates constantly using either Continuous or Discrete mode.
 
 ### RotatePauseRotate.cs
+7ca5cf97dae0415d9f016d54bcf64542
 Rotates a GameObject around a chosen axis, alternating between rotation and pause phases. - Axis can be X, Y, Z, or a custom vector. - Rotation speed set by revolutions per second. - rotateDuration controls how long it rotates before pausing. - pauseDuration controls how long it waits before resuming rotation.
 
 ### RotatorStepwise.cs
+dda475f764aa47b1bbfdf2ff57613cab
 Rotates a GameObject in discrete steps after a pause interval. - Axis: choose X, Y, or Z for rotation axis. - RotationMode: - FixedAngle: applies the same angle every step. - RandomRange: picks a random angle within [minAngle, maxAngle]. - pauseDuration defines the wait time between each rotation step.
 
 ### ScaleStepWise.cs
+No ID found in ScaleStepWise.cs.
 No summary found in ScaleStepWise.cs.
 
 ### SpawnWithKeyDown.cs
+5535e49545ac45d6bf77bec5b4e964a9
 Spawns a prefab when a specified key is pressed. - Key is configurable (default: Space). - OffsetMode: - Constant: uses a fixed offset vector. - RandomUnitCircle: spawns at a random offset within a unit circle. - Instantiates the prefab at (transform.position + offset) with no rotation.
 
 ### SweepMesh.cs
+3149c337586f42ae8d274f5587b8fc76
 No summary found in SweepMesh.cs.
 
 ### TeleportToTarget.cs
+9048098141934f20b0604c595b89b5b9
 No summary found in TeleportToTarget.cs.
 
 ### ToggleAfterDelay.cs
+d211d4b52335417396dc87355bf90e48
 No summary found in ToggleAfterDelay.cs.
 
 ### ToggleChildrenOff.cs
+020e2299188643429153708c87473e41
 No summary found in ToggleChildrenOff.cs.
 
 ### ToggleComponentOnOff.cs
+29c867fe0ef94480b751db05b47208de
 Toggles a Behaviour component on after a delay, then off after another delay. - Disables the component at Start. - Enables it after onDelay seconds. - Disables it again after offDelay seconds, then stops running the script.
 
 ### ToggleMultipleTimes.cs
+6476d4f2cdfe486e8936af3656343f79
 No summary found in ToggleMultipleTimes.cs.
 
 ### ToggleOff.cs
+08b4157b5f63404190770ab1a2fe60b1
 No summary found in ToggleOff.cs.
 
 ### ToggleOn.cs
+25501a128c374c029c1aa6b34c81c105
 No summary found in ToggleOn.cs.
 
 ### ToggleWithKey.cs
+c66efab2e46341aaabb330952e627f90
 No summary found in ToggleWithKey.cs.
 
 ### ToggleWithPeriods.cs
+No ID found in ToggleWithPeriods.cs.
 Toggles a specified GameObject on and off in repeating periods. - Off duration is fixed (offPeriod). - On durations cycle through values in onPeriods (or fallback if empty). - Optionally starts with a random offset into the off period. - Requires an explicit target GameObject to toggle.
 
 ### TopDownMovement2D.cs
-No summary found in TopDownMovement2D.cs.
+9c65abeb46fa40d8938c929b4143e15c
+Moves the GameObject in 2D space using horizontal and vertical input Applies (normalized by default) direction multiplied by speed and deltaTime
 
 ### UVOffset.cs
+26c13e0b0e1b4d47a3d80002a2853782
 Continuously offsets the UV coordinates of a material to create scrolling or stepped texture movement. - Can run continuously with uvSpeed or in discrete steps with stepSize and stepInterval. - Supports using the main texture offset or a custom shader property. - Updates the material’s texture offset every frame.
 
 ### VerticalMenu.cs
+eb18803a209c405fa354412717914307
 No summary found in VerticalMenu.cs.
 
 ### TreeSnowController.cs
+c4436fe55b8e4a7790a96a93814ca049
 No summary found in TreeSnowController.cs.
 
+### ChipWindow.cs
+No ID found in ChipWindow.cs.
+Reusable pill-like toggle. Notifies manager on change.
+
 ### ParserToJSON.cs
+No ID found in ParserToJSON.cs.
 No summary found in ParserToJSON.cs.
 
+### BasicsScriptFinder.cs
+1cd60119e8bf45af9357a9460995f3ee
+No summary found in BasicsScriptFinder.cs.
+
+### SummaryGetter.cs
+3f50e22b1b8c4c24b8fd9a88ff9a65da
+for (int i = 0; i < lines.Length; i++) { if (lines[i].Contains(" <summary>")) { string summary = ""; for (int j = i + 1; j < lines.Length; j++) {
+
 ### PseudoFabEditor.cs
+No ID found in PseudoFabEditor.cs.
 No summary found in PseudoFabEditor.cs.
+
+### GenericAnimationEditor.cs
+181ea385c0244472a3f097c22fa63d6e
+No summary found in GenericAnimationEditor.cs.
 

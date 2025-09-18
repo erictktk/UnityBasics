@@ -1,6 +1,10 @@
 // !!!ID: 74e4143f046149fc80f01099531e1be2
 using UnityEngine;
 
+/// <summary>
+/// Enables or disables a specified component based on the distance to another Transform.
+/// Can trigger once or continuously loop depending on the 'loop' setting.
+/// </summary>
 namespace Basics {
 	public class EnableComponentOnDistance : MonoBehaviour {
 		public Behaviour componentToEnable;

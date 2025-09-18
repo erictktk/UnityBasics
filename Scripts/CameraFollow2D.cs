@@ -1,6 +1,10 @@
 // !!!ID: e97ae292805e4610b5645ba998f78761
 using UnityEngine;
 
+/// <summary>
+/// Simple 2D camera follow script. Follows a target with an optional offset,
+/// and can smoothly lag behind using interpolation if enabled.
+/// </summary>
 namespace Basics {
     public class CameraFollow2D : MonoBehaviour {
         public Transform target;

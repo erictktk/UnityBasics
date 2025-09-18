@@ -2,6 +2,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Supports SpriteRenderer or UI Image on the same GameObject  
+/// Overrides chosen RGBA channels with set values  
+/// Preserves original values for channels not overridden  
+/// Updates color every frame to apply the changes  
+/// </summary>
 namespace Basics {
     public class ColorChannelSetter : MonoBehaviour {
         [Header("Defaults to SpriteRenderer or Image component on this GameObject")]

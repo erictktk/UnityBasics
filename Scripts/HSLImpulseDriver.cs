@@ -1,6 +1,14 @@
 // !!!ID: d64640de54394f778ee7bfdea7f28afd
 using UnityEngine;
 
+
+/// <summary>
+/// Pulses a material’s HSL property between base and peak luminance  
+/// Supports single pulse or repeat mode with a set repeat count  
+/// Uses coroutine timing based on a configurable period  
+/// Resets property to its base value when finished  
+/// </summary>
+
 namespace Basics {
     public class HSLImpulseDriver : MonoBehaviour {
         public enum Mode { Once, Repeat }

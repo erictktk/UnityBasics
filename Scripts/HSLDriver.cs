@@ -1,6 +1,13 @@
 // !!!ID: d476d719d87046e29f93a60820ed1d9d
 using UnityEngine;
 
+
+/// <summary>
+/// Drives HSL shader properties on a material in real time  
+/// Updates tint color, hue shift, saturation, and luminance values  
+/// Executes both in edit mode and play mode  
+/// </summary>
+
 namespace Basics {
     [ExecuteAlways]
     public class HSLDriver : MonoBehaviour {

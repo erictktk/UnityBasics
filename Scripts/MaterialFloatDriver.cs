@@ -2,6 +2,14 @@
 using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Drives a material parameter (float or selected Vector4 components) over time
+/// Supports multiple drivers: ShiftConstant, Modulo, Periodic (sine), Switch, StepSmooth (curve), RandomStep
+/// Optional post-processing: Lerp remap and AnimationCurve shaping
+/// Per-driver delays, ranges, periods, and offsets for control
+/// Uses Renderer.material at runtime and a persistent coroutine update
+/// </summary>
+
 public class MaterialFloatDriver : MonoBehaviour {
     public enum ParamType { Float, Vector4 }
     public enum DriverType {

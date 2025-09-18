@@ -1,6 +1,9 @@
 // !!!ID: 010157ad6d014e70bb4067048d8887f3
 using UnityEngine;
 
+/// <summary>
+/// Moves this GameObject toward a target Transform every frame with MoveTowards 
+/// </summary>
 namespace Basics {
     public class FollowTarget : MonoBehaviour {
         public Transform target;
